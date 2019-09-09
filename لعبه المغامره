@@ -1,0 +1,47 @@
+import time
+import random
+
+
+def printWelcomeMassage():
+    print("Hello everybody i am magician and i have a lot of staf")
+    time.sleep(3)
+    print("choose and guess to win and be luckiy !!")
+    time.sleep(3)
+
+
+def chooseItem():
+    WiningList = ["Apple", "Snacks", "pen"]
+    lostList = ["Banana", "Mobile", "Money"]
+    firstItem = random.choice(winingList)
+    secondItem = random.choice(loseList)
+    print(f"To choose {firstItem} press 1 , to choose {secondItem} press 2")
+    while True:
+        choice = input("your choose is : ")
+        if choice == "1" or choice == "2":
+            return choice
+            break
+        else:
+            print("please enter correct choice 1 , 2")
+
+
+def play():
+    printWelcomeMassage()
+    choice = chooseItem()
+    if choice == "1":
+        print("congratulation!!")
+    elif choice == "2":
+        print("HardLuck!!")
+    while True:
+        print("To play again press y to chose press n")
+        state = input("your choice : ")
+        if state == "y":
+            play()
+            break
+        elif stste == "n":
+            print("Goodbye")
+            break
+        else:
+            print("please choose correct choice")
+
+
+play()
